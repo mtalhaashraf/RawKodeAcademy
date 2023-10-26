@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/page.astro";
+const breadcrumbs = [{
+  title: 'Contact',
+  href: '/contact'
+}]
+---
+
+<Layout title="Want to chat?" breadcrumbs={breadcrumbs}>
+  <div id="my-reform"></div>
+
+  <script id="reform-script" src="https://embed.reform.app/v1/embed.js"
+  ></script>
+
+  <script>
+    window.Reform =
+      window.Reform ||
+      function () {
+        (Reform.q = Reform.q || []).push(arguments);
+      };
+  </script>
+
+  <script>
+    Reform("init", {
+      url: "https://forms.reform.app/rawkode/contact-us/akd2rz",
+      target: "#my-reform",
+      background: "transparent",
+    });
+  </script>
+</Layout>
